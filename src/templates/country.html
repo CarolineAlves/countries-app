@@ -1,0 +1,32 @@
+<section class="container country-details">
+    <div class="back">
+        <button ui-sref="homeState"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>  Back</button>
+    </div>
+    <div ng-repeat="details in country">
+        <div class="col-md-5">
+            <img ng-src="{{details.flag}}" alt="..." class="img-rounded img-responsive">
+        </div>
+        <div class="col-md-7">
+            <div class="col-md-12">
+                <h1>{{details.name}}</h1>
+                <div class="col-md-6">
+                    <p>Native Name: <span>{{details.nativeName}}</span></p>
+                    <p>Population: <span>{{details.population}}</span></p>
+                    <p>Region: <span>{{details.region}}</span></p>
+                    <p>Sub Region: <span>{{details.subregion}}</span></p>
+                    <p>Capital: <span>{{details.capital}}</span></p>
+                </div>
+                <div class="col-md-6">
+                    <p ng-repeat="domain in details.topLevelDomain">Top Level Domain: <span>{{domain}}</span></p>
+                    <p ng-repeat="currencie in details.currencies">Currencies: <span>{{currencie.code}}</span></p>
+                    <p>Langueges: <span  ng-repeat="language in details.languages"> {{language.name}}</span></p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="border-countries">
+                    <span>Border Countries:</span> <button ng-repeat="border in details.borders" ui-sref="borderCountry({countryCode: border})"><span>{{border}}</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

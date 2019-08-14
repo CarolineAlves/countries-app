@@ -1,0 +1,26 @@
+<section class="home container-fluid" ng-controller="HomeController">
+    <div class="filters col-xs-12 col-md-12">
+        <input class="fa fa-search col-md-4 col-xs-12" ng-model="name" type="text" placeholder="Search for a country...">
+        <div class="col-md-2 col-xs-12 pull-right filter-region">
+            <select  ng-model="region.name" ng-change="selectRegion(region.name)">
+                <option value=""> Filter by Region</option> <!-- not selected / blank option -->
+                <option ng-repeat=" region in regions"  value="{{region.id}}">{{region.name}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12">
+        <div class="col-xs-12 col-md-3" ng-repeat="country in countries | filter:name | filter:region.name">
+            <div class="countries" ui-sref="country({countryName: country.name})">
+                <div class="countries-details text-center">
+                    <img ng-src="{{country.flag}}" class="img-responsive">
+                    <p class="name">{{country.name}}</p>
+                    <p class="data">Populacao: <span>{{country.population}}</span></p>
+                    <p class="data">Regiao: <span>{{country.region}}</span></p>
+                    <p class="data">capital: <span>{{country.capital}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<ui-view></ui-view>

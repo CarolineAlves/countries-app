@@ -1,0 +1,16 @@
+@import "fontawesome/scss/font-awesome";
+@import "variables";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import "home";
+@import "country";
+
+
+.navbar-default {
+  height: 60px;
+  background-color: $dark-mode-elements !important;
+  border: none;
+  color: $dark-light-mode-elements !important;
+  .navbar-brand {
+    font-size: 2em;
+  }
+}
