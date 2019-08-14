@@ -4,7 +4,7 @@
 
 Você vai precisar ter o NVM e o RVM instalados. Adicione a versão do NodeJS  e do Ruby de sua preferência. Eles são usados apenas para tarefas de build do App.
 # install nvm
-# peque a URL mais atualizada em https://github.com/creationix/nvm
+pegue a URL mais atualizada em https://github.com/creationix/nvm
 mkdir ~/.nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 # restart terminal
