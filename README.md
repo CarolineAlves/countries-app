@@ -6,19 +6,19 @@ Você vai precisar ter o NVM e o RVM instalados. Adicione a versão do NodeJS  e
 # install nvm
 pegue a URL mais atualizada em https://github.com/creationix/nvm
 mkdir ~/.nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 # restart terminal
-nvm install 4.6.2
-npm install -g grunt grunt-cli bower
+$ nvm install 4.6.2
+$ npm install -g grunt grunt-cli bower
 
 # install rvm
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-curl -sSL https://get.rvm.io | bash -s stable
+$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+$ curl -sSL https://get.rvm.io | bash -s stable
 # restart terminal
-rvm install 2.3.3
+$ rvm install 2.3.3
 #ajustar o terminal para permitir login shel
-rvm use 2.3.3
-gem install bundler
+$ rvm use 2.3.3
+$ gem install bundler
 
 O NodeJS  vai rodar o Grunt para fazer as tarefas de organização do código e o Ruby para rodar o Compass (que é executado pelo Grunt) para gerar o CSS do SASS.
 
