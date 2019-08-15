@@ -55,7 +55,7 @@ Para abrir seu App de uma maneira profissional, que é a maneira como vc deve fa
 
     server {
             listen 80;
-            server_name local-base.inceres.com.br;
+            server_name localhost
     
             root /<caminho>/base-app/www;
             index index.html;
